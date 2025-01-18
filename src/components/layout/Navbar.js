@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import weatherLogo from '../assets/weather-logo.png';
+import weatherLogo from '../../assets/weather-logo.png';
 
 const Navbar = () => {
     return (

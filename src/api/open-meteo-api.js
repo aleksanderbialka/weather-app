@@ -20,8 +20,8 @@ export const fetchWeather = async (location) => {
                 forecast_days: 14
                 }
             });
-            const data = await response.json();
-            return data;
+            console.log("Weather data:", response.data);
+            return response.data;
             
     }catch(error){
         console.error("Error while fetching data:", error);

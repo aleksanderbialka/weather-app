@@ -1,12 +1,7 @@
 import axios from "axios";
-import yaml from "js-yaml";
-import fs from "fs";
-import path from "path";
 
-const configPath = path.resolve(__dirname, "../config/config.yaml");
-const config = yaml.load(fs.readFileSync(configPath, "utf8"));
-const GEOCODING_API_KEY = config.geocoding_api_key;
 
+const GEOCODING_API_KEY = process.env.REACT_APP_GEOCODING_API_KEY;
 
 const GEOCODING_API = "https://api.opencagedata.com/geocode/v1/json";
 
