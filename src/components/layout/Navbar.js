@@ -5,7 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import weatherLogo from '../../assets/weather-logo.png';
 
-const Navbar = () => {
+const Navbar = ({ activeTab, onTabChange, isDay }) => {
     return (
         <AppBar
             position="static"
@@ -22,16 +22,16 @@ const Navbar = () => {
                     alt="Weather Logo"
                     style={{ height: '40px', marginRight: '16px' }}
                 />
-                <Typography variant="h6"  sx={{ flexGrow:1, ml: 1, color: 'black' }}>
+                <Typography variant="h6" sx={{ flexGrow: 1, ml: 1, color: isDay ? 'black' : 'white' }}>
                     PewnaPogoda.pl
                 </Typography>
                 <Tabs
-                      sx={{
-                        color: 'black',
-                    }}
+                    value={activeTab}
+                    onChange={(e, newValue) => onTabChange(newValue)}
                 >
-                    <Tab label="Pogoda 7 dni" />
-                    <Tab label="Pogoda 14 dni" />
+                    <Tab label="Dziś" value="current" sx={{color: isDay ? 'black' : 'white'}} />
+                    <Tab label="7 dni" value="7days" sx={{color: isDay ? 'black' : 'white'}}/>
+                    <Tab label="14 dni" value="14days" sx={{color: isDay ? 'black' : 'white'}} />
                 </Tabs>
             </Toolbar>
         </AppBar>

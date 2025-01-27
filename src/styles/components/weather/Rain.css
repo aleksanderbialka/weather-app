@@ -1,0 +1,44 @@
+.rain-container {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 20px);
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.rain {
+    position: fixed;
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: dropFall linear infinite;
+    pointer-events: none;
+    filter: blur(0.3px);
+    transform: rotate(20deg);
+}
+
+.heavy-rain {
+    width: 3px;
+    height: 50px;
+    opacity: 0.6;
+}
+
+.light-rain {
+    width: 2px;
+    height: 35px;
+    opacity: 0.3;
+}
+
+@keyframes dropFall {
+    from { transform: translateY(-100vh) rotate(15deg); }
+    to { transform: translateY(100vh) rotate(15deg); }
+}

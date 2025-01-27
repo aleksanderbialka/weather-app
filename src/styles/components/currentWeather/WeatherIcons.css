@@ -1,0 +1,38 @@
+.weather-icon {
+    font-size: 2.8rem !important;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.weather-icon-small {
+    font-size: 1.4rem !important;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #666;
+}
+
+.weather-icon.wi-thermometer,
+.weather-icon-small.wi-thermometer {
+    color: #ff6b6b;
+}
+
+.weather-icon.wi-humidity,
+.weather-icon-small.wi-humidity {
+    color: #4dabf7;
+}
+
+.weather-icon.wi-strong-wind,
+.weather-icon-small.wi-strong-wind,
+.weather-icon.wi-wind-deg {
+    color: #15aabf;
+}
+
+.weather-icon.md-air {
+    background: linear-gradient(45deg, #69db7c, #4dabf7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather-icon-small.ri-temp-hot-line {
+    color: #ffa94d;
+}

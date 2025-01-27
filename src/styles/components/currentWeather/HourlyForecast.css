@@ -1,0 +1,82 @@
+.hourly-forecast {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    width: calc(100% - 40px);
+    margin: 20px auto 50px;
+}
+
+.hourly-forecast h2 {
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hours-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 15px;
+    margin: 10px auto 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    scrollbar-width: thin;
+    height: 160px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.hours-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.hours-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.hours-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.hour-item {
+    min-width: 130px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.hour-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.hour-item .hour {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hour-item .hour-temp,
+.hour-item .hour-precip,
+.hour-item .hour-wind {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0;
+    font-size: 0.85rem;
+}
+
+.hour-item .hour-temp {
+    font-weight: bold;
+}

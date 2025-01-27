@@ -1,0 +1,60 @@
+.location-container {
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.location-container h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.location-input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: 300px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.location-input::placeholder {
+    color: #666;
+}
+
+.location-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.location-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
