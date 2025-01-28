@@ -1,0 +1,74 @@
+:root {
+    --white-transparent: rgba(255, 255, 255, 0.7);
+    --white-more-transparent: rgba(255, 255, 255, 0.5);
+    --text-dark: #333;
+    --text-light: #666;
+}
+
+.dates-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    background: var(--white-transparent);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: calc(100% - 40px);
+}
+
+.dates-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.dates-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.dates-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.date-item {
+    min-width: 200px;
+    padding: 15px;
+    background: var(--white-more-transparent);
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.date-item:hover {
+    transform: translateY(-5px);
+    background: var(--white-transparent);
+}
+
+.date-item h3 {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+
+.date-item [class^="daily-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.date-item .daily-temp {
+    font-weight: bold;
+}
+
+.date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 5px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
