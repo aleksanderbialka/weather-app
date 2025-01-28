@@ -1,0 +1,30 @@
+
+networks:
+  weather-net:
+    driver: bridge
+services:
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weather-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/var/www/weather_app
+    networks:
+      - weather-net
+
+  Nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - weather-net
+    depends_on:
+      - weather-app
+    extra_hosts:
+      - "pewnapogoda.pl:127.0.0.1"
