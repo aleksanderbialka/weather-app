@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# PewnaPogoda.pl - Aplikacja Pogodowa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Intuicyjna i nowoczesna aplikacja pogodowa stworzona w React, dostarczająca szczegółowych informacji na temat warunkach atmosferycznych.
 
-## Available Scripts
+## Funkcjonalności
 
-In the project directory, you can run:
+- **Aktualna Pogoda**
+  - Temperatura rzeczywista i odczuwalna
+  - Wilgotność powietrza
+  - Prędkość i kierunek wiatru
+  - Jakość powietrza (PM2.5 i PM10)
 
-### `npm start`
+- **Prognoza 24-godzinna**
+  - Temperatura godzinowa
+  - Wilgotność
+  - Prędkość wiatru
+  - Interaktywny scroll z danymi
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Prognoza Długoterminowa**
+  - Prognozy 7-dniowa i 14-dniowa
+  - Temperatury maksymalne i minimalne
+  - Suma opadów
+  - Prędkość i kierunek wiatru
+  - Wizualizacja danych na wykresie (min, max temperatura)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Efekty Wizualne**
+  - Dynamiczne tło dostosowane do warunków pogodowych
+  - Animowane chmury
+  - Efekty deszczu
+  - Zmiana motywu dzień/noc
 
-### `npm test`
+## Technologie
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- Chart.js
+- Material-UI
+- Axios
+- React Icons
 
-### `npm run build`
+## API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Aplikacja korzysta z następujących API:
+- Open-Meteo API (dane pogodowe)
+- OpenCage Geocoding API (geolokalizacja)
+- Open-Meteo Air Quality API (jakość powietrza)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalacja
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Sklonuj repozytorium:
+```bash
+git clone https://github.com/aleksanderbialka/weather-app.git
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Dodaj swój klucz API do pliku .env
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Utworz darmowe konto na stronie i pobierz klucz API: https://opencagedata.com/dashboard 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Dodaj klucz API do pliku .env
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+REACT_APP_GEOCODING_API_KEY=twój_klucz_api
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Zbuduj kontenery i uruchom aplikacje
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
 
-### Code Splitting
+docker compose up
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+### 4. Aplikacja powinna być dostępna na porcie 3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+http://localhost:3000
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Użytkowanie
+Wyszukaj miasto wpisując jego nazwę w polu wyszukiwania
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Przełączaj się między widokami za pomocą zakładek:
+- Dziś - aktualna pogoda i prognoza 24h
+- 7 dni - prognoza tygodniowa
+- 14 dni - prognoza dwutygodniowa
