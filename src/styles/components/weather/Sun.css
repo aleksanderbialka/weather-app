@@ -28,3 +28,21 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+@media (max-width: 768px) {
+    .sun {
+        width: 120px;
+        height: 120px;
+        right: 30px;
+        top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sun {
+        width: 80px;
+        height: 80px;
+        right: 20px;
+        top: 20px;
+    }
+}

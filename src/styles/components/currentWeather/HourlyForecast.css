@@ -80,3 +80,30 @@
 .hour-item .hour-temp {
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .hourly-forecast {
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .hour-item {
+        min-width: 100px;
+    }
+
+    .hour-item .hour {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hours-scroll-container {
+        height: 140px;
+        padding: 10px;
+    }
+
+    .hour-item {
+        min-width: 90px;
+        padding: 8px;
+    }
+}

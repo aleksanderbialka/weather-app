@@ -58,3 +58,31 @@
     background: rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+    .location-container {
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    .location-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .location-input {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .location-button {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-container h1 {
+        font-size: 1.5rem;
+    }
+}

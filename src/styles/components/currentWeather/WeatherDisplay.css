@@ -39,3 +39,26 @@
     color: #666;
     margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+    .weather-data {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-data {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-data p {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .weather-data p span {
+        font-size: 1.5rem;
+    }
+}
