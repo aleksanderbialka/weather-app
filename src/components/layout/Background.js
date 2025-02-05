@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/components/layout/Background.css";
-import getBackgroundGradient from "../weather/weatherGradients";
+import getBackgroundGradient from "../../utils/weatherGradients";
 import weatherConstants from "../../constants/weatherConstants";
 import Sun from "../weather/Sun";
 import Clouds from "../weather/Clouds";
