@@ -2,6 +2,9 @@
 
 Intuicyjna i nowoczesna aplikacja pogodowa stworzona w React, dostarczająca szczegółowych informacji na temat warunkach atmosferycznych.
 
+![image](https://github.com/user-attachments/assets/7ab5e1cb-92db-42dc-8e78-6cfc855a0302)
+
+
 ## Funkcjonalności
 
 - **Aktualna Pogoda**
@@ -84,3 +87,10 @@ Przełączaj się między widokami za pomocą zakładek:
 - Dziś - aktualna pogoda i prognoza 24h
 - 7 dni - prognoza tygodniowa
 - 14 dni - prognoza dwutygodniowa
+
+## Dodatkowe zrzuty ekranu aplikacji
+
+![image](https://github.com/user-attachments/assets/ecc2763c-6df7-489e-8c0f-e5cb462095c4)
+
+![image](https://github.com/user-attachments/assets/2c5f8e1c-0f88-481a-a17b-d86883a46837)
+
